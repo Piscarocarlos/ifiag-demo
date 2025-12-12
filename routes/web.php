@@ -9,3 +9,5 @@ Route::get("/", function () {
 Route::get("/about", function () {
     return view("pages.about");
 });
+
+// another route
