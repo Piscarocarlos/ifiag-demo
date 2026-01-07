@@ -13,8 +13,11 @@
                         <form action="{{ route('category.store') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
-                                <label for="name">Nom de la catégorie:</label>
-                                <input type="text" name="name_category_input" id="name" class="form-control">
+                                <label for="name">Nom de la catégorie: <span class="text-danger">*</span></label>
+                                <input type="text" name="name_category_input" id="name" class="form-control @error('name_category_input') is-invalid @enderror">
+                                @error('name_category_input')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <button class="btn btn-dark w-100">Sauvegarder</button>
