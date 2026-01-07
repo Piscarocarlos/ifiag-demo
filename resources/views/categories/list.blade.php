@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
                         <h1 class="h6">Liste des catégories</h1>
-                        <a href="#" class="btn btn-dark">Créer une nouvelle catégorie</a>
+                        <a href="{{ route('category.create') }}" class="btn btn-dark">Créer une nouvelle catégorie</a>
                     </div>
                 </div>
                 <div class="card-body">
