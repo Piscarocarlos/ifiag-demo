@@ -24,6 +24,7 @@ class CategoryController extends Controller
         $cat->slug = Str::slug($request->name_category_input);
 
         $cat->save();
+        // attention, il faut d'abord installer le package : composer require php-flasher/flasher-laravel
         flash()->success('La catégorie est créée avec succès !');
         return redirect()->route('category.list');
     }
